@@ -10,12 +10,16 @@ class HomeScreen extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(16),
       child: Column(
+        // crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Spacer(),
+          // SizedBox(height: 40),
+          Image.asset("assets/logo.png"),
+          // Spacer(),
           Text(
             "Dictionary App",
             style: TextStyle(
-              color: Colors.deepOrangeAccent,
+              color: Color(0xFF754898),
               fontSize: 34,
               fontWeight: FontWeight.bold,
             ),
@@ -23,7 +27,7 @@ class HomeScreen extends StatelessWidget {
           Text(
             "Search any word you want",
             style: TextStyle(
-              color: Colors.white,
+              color: Colors.black,
               fontSize: 14,
             ),
           ),
@@ -33,24 +37,26 @@ class HomeScreen extends StatelessWidget {
               decoration: InputDecoration(
                 hintText: "Search a word",
                 border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(4),
+                  borderRadius: BorderRadius.circular(12),
                   borderSide: BorderSide(color: Colors.transparent),
                 ),
                 fillColor: Colors.grey[100],
                 filled: true,
                 prefixIcon: Icon(Icons.search),
-                hintStyle: TextStyle(color: Colors.white),
+                hintStyle: TextStyle(color: Colors.grey),
               )),
-          Spacer(),
+          // Spacer(),
+          SizedBox(height: 20),
           Container(
-            width: double.infinity,
+            width: 100,
+            height: 50,
             child: ElevatedButton(
               child: Text("SEARCH"),
               onPressed: () {
                 cubit.getWordSearched();
               },
               style: ElevatedButton.styleFrom(
-                primary: Colors.deepOrangeAccent,
+                primary: Color(0xFF754898),
                 padding: const EdgeInsets.all(16),
               ),
             ),
@@ -89,7 +95,7 @@ class HomeScreen extends StatelessWidget {
       },
       bloc: cubit,
       child: Scaffold(
-        backgroundColor: Colors.blueGrey[900],
+        backgroundColor: Color(0xFFF0E2FB),
         body: cubit.state is WordSearchingState
             ? getLoadingWidget()
             : cubit.state is ErrorState
