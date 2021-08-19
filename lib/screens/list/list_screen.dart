@@ -10,12 +10,12 @@ class ListScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blueGrey[900],
+      backgroundColor: Color(0xFFF0E2FB),
       body: ListView.separated(
           itemBuilder: (context, index) => ListTile(
                 title: Text(
                   "${index + 1} ${words[index].word}",
-                  style: TextStyle(color: Colors.white),
+                  style: TextStyle(color: Colors.black),
                 ),
                 onTap: () {
                   Navigator.push(

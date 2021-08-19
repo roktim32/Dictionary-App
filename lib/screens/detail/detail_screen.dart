@@ -10,7 +10,7 @@ class DetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blueGrey[900],
+      backgroundColor: Color(0xFFF0E2FB),
       body: Container(
         padding: const EdgeInsets.all(32),
         width: double.infinity,
@@ -18,7 +18,7 @@ class DetailScreen extends StatelessWidget {
           children: [
             Text(
               "${wordResponse.word}",
-              style: TextStyle(color: Colors.white, fontSize: 36),
+              style: TextStyle(color: Colors.black, fontSize: 36),
             ),
             SizedBox(
               height: 16,
@@ -33,7 +33,7 @@ class DetailScreen extends StatelessWidget {
                     children: [
                       Text(
                         meaning.partOfSpeech,
-                        style: TextStyle(color: Colors.white),
+                        style: TextStyle(color: Colors.black),
                       ),
                       SizedBox(
                         height: 8,
@@ -44,7 +44,7 @@ class DetailScreen extends StatelessWidget {
                             Text(
                               "Defination : " + definations[index].definition,
                               style: TextStyle(
-                                  color: Colors.white,
+                                  color: Colors.black,
                                   fontWeight: FontWeight.bold),
                             ),
                             SizedBox(
@@ -52,7 +52,7 @@ class DetailScreen extends StatelessWidget {
                             ),
                             Text(
                               "Sentence  : ${definations[index].example}",
-                              style: TextStyle(color: Colors.white),
+                              style: TextStyle(color: Colors.black),
                             ),
                           ],
                           crossAxisAlignment: CrossAxisAlignment.start,
