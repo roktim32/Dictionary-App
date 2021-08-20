@@ -40,7 +40,7 @@ class HomeScreen extends StatelessWidget {
                   borderRadius: BorderRadius.circular(12),
                   borderSide: BorderSide(color: Colors.transparent),
                 ),
-                fillColor: Colors.grey[100],
+                fillColor: Colors.white,
                 filled: true,
                 prefixIcon: Icon(Icons.search),
                 hintStyle: TextStyle(color: Colors.grey),
