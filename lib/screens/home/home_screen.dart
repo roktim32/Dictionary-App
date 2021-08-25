@@ -17,7 +17,7 @@ class HomeScreen extends StatelessWidget {
           Image.asset("assets/logo.png"),
           // Spacer(),
           Text(
-            "Dictionary App",
+            "Dictionary",
             style: TextStyle(
               color: Color(0xFF754898),
               fontSize: 35,
